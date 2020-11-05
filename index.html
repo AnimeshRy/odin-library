@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="header">
+            <h1>Virtual Library</h1>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <form>
+            <h3>Book Title</h3>
+            <input type="text" id="title" autocomplete="off">
+            <h3>Author Name</h3>
+            <input type="text" id="author" autocomplete="off">
+            <h3>Number of Pages</h3>
+            <input type="number" id="pages">
+            <h3>Have you read it or not ? </h3>
+            <label for="read">Read</label>
+            <input type="radio" value="true" id="read" name="rStatus">
+            <label for="nread">Not Read</label>
+            <input type="radio" value="false" id="nread" name="rStatus">
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div class="itemlist">
+        <h2>
+            Book Items
+        </h2>
+        <ul class="unl">
+
+        </ul>
+    </div>
+</body>
+</html>
