@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.heading {
+  justify-content: center;
+  text-align: center;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.05);
+  color: rgba(1, 1, 1, 0.8);
+  /* background-image: url("images/back.jpg"); */
+}
+
+button, input[type="submit"] {
+  font-family: inherit;
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+
+
+button:focus, input:focus {
+  outline: none;
+}
+
+.container {
+  min-width: 300px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+/*base page formatting*/
+table {
+  width: 100%;
+  margin-top: 2em;
+  background-color: white;
+  border-radius: 5px;
+  border-collapse: collapse; /*remove border gaps*/
+  box-shadow: 0 0 5px 3px rgba(1, 1, 1, 0.05);
+}
+
+th {
+  padding: 0.5em 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+td {
+  text-align: center;
+  padding: 0.5em 0;
+  width: 22.5%; /* fix width to prevent cell resizing */
+}
+
+.remove-cell {
+  width: 10%;
+}
+
+tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  line-height: 2em;
+}
+
+tbody tr:hover {
+  background-color: rgba(0, 0, 0,);
+}
+
+#new-book, input[type="submit"] {
+  background-color: rgb(99, 38, 4);
+  margin-top: 1em;
+  float: right;
+  padding: 0.7em;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+#new-book:hover, input[type="submit"]:hover {
+  filter: brightness(110%);
+}
+
+/*form page formatting*/
+.form-container {
+  background-color: rgb(242, 242, 242);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 2em;
+}
+
+.form-container h1 {
+  margin-bottom: 1em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.3em;
+}
+
+form input[type="text"], input[type="number"] {
+  margin: 0.3em 0 1em 0;
+  padding: 1em;
+  border: none;
+  line-height: 1em;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+form input[type="text"]:hover, input[type="number"]:hover {
+  box-shadow: 0 0 3px 1px rgba(0, 162, 255, 0.25);
+}
+
+form input[type="text"]:focus, input[type="number"]:focus {
+  box-shadow: 0 0 3px 1px rgba(0, 162, 255, 0.5);
+}
+
+/* remove button formatting */
+tr .remove {
+  border: none;
+  margin: auto;
+  background-image: url('../images/x-circle.svg');
+  background-color: transparent;
+  display: block;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  opacity: 0%;
+}
+
+tr:hover .remove {
+  animation: forwards 0.3s fadein;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+.remove:hover {
+  filter: brightness(125%);
+}
+
+.read-tick:hover {
+  color: transparent;
+  margin: auto;
+  background-image: url('../images/check.svg');
+  background-repeat: no-repeat;
+  background-color: transparent;
+  cursor: pointer;
+  display: block;
+  width: 24px;
+  height: 24px;
+  filter: invert(19%) sepia(60%) saturate(6985%) hue-rotate(101deg) brightness(94%) contrast(101%);
+}
+
+.read-cross:hover {
+  color: transparent;
+  margin: auto;
+  background-image: url('../images/cross.svg');
+  background-repeat: no-repeat;
+  background-color: transparent;
+  cursor: pointer;
+  display: block;
+  width: 24px;
+  height: 24px;
+  filter: invert(8%) sepia(73%) saturate(6095%) hue-rotate(6deg) brightness(97%) contrast(114%);
+}
