@@ -102,7 +102,7 @@ function createNewBook() {
 
 function toggleReadStatus() {
     // toggle corresponding book element status
-    console.log(this);
+    // console.log(this);
     const book = getBookByID(getRowIdByChildNode(this));
     book.hasRead = !book.hasRead;
     updateLocalStorage(myLibrary);
@@ -118,7 +118,9 @@ function getBookByID(id) {
 }
 
 function getRowIdByChildNode(node) {
-    while (node.nodeName != "TR") node = node.parentNode;
+    while (node.nodeName != "TR") {
+        node = node.parentNode
+    };
     return node.id;
 }
 
