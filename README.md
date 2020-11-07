@@ -6,4 +6,3 @@ Uses local storage to add, remove and check books from the table.
 
 ![Virtual Library](images/img.png)
 
-Check it out live at - 
