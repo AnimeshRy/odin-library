@@ -37,15 +37,22 @@ function showitem() {
     itemlist.append(ul);
     myLibrary.forEach(function (book) {
         item = document.createElement('li')
+        item.setAttribute("data", `number: ${myLibrary.indexOf(book)}`);
         item.innerHTML = `<div><span>Title : ${book.title}</span>
         <br>
         <span>Author : ${book.author}</span>
         <br>
         <span>Pages: ${book.pages}</span>
         <br>
-        <span>Status: ${(book.Read === 'true') ? 'Read' : 'Pending'}</span></div><br>`
+        <span>Status: ${(book.Read === 'true') ? 'Read' : 'Pending'}</span>
+        <span><button class="delete-item">Delete</button></div><br>`
+        
         document.querySelector('.unl').append(item);
     })
+}
+
+function deleteinstance(book) {
+    myLibrary.remove(book);
 }
 
 let myLibrary = [];
